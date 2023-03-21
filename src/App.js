@@ -25,12 +25,11 @@
 // });
 
 
-// 2. case
+// // 2. case
 
 // 태그를 활용한 업데이트
-import React from "react";
 
-function App(){
+"use strict"
 
   // 즉시 실행함수를 사용하여 dataModule 을 생성하고 모듈 내에서 DOM 요소를 가져오는 코드임
   const dataModule = (function() {
@@ -164,5 +163,95 @@ function App(){
   // 문자열 msg와 스타일을 적용하기 위한 css 변수를 전달한다
   // msg문자열이 지정한 스타일로 출력 / 스타일은 CSS문법으로 출력
 
-}
-export default App;
+
+
+// 원본
+
+// "use strict"
+
+// const dataModule = (function() {
+
+//   const DOM = {
+//     addTag: document.querySelector('.addTag'),
+//     container: document.querySelector('.container'),
+//     tagContainer: document.querySelector('.container__tag'),
+//     tags: document.querySelectorAll('.tag'),
+//   };
+
+//   return {
+    
+//     getDOM() {
+//       return DOM;
+//     },
+
+//   }
+// })();
+
+
+
+// const controller = (function() {
+
+//   const tagHTML = function (keyword, [R, G, B]) {
+//     return `<article style="background-color: rgba(${R}, ${G}, ${B}, 0.7);" class="tag" data-keyword="${keyword}">#${keyword}</article>`
+//   };
+
+//   const randomRGB = function(min, max) {
+//     return Math.floor(Math.random() * (max - min) + 1) + min;
+//   }
+
+//   const getRandomRGB = function(min, max) {
+//     let arrRGB = [];
+//     arrRGB.push(randomRGB(min, max));
+//     arrRGB.push(randomRGB(min, max));
+//     arrRGB.push(randomRGB(min, max));
+//     return arrRGB;
+//   }
+
+//   return {
+
+//     searchByTag(keyword) {
+//       fetch(`https://source.unsplash.com/featured/?${keyword.toLowerCase()}`)
+//       .then((response) => {
+//         document.body.style.backgroundImage = `url(${response.url})`;
+//       });
+//     },
+
+//     addNewTag(target, parentNode) {
+//       const newColor = getRandomRGB(180, 230);
+//       const newHTML = tagHTML(target.value, newColor);
+//       parentNode.insertAdjacentHTML('beforeend', newHTML);
+//       this.searchByTag(target.value);
+//       target.value = '';
+//       target.focus();
+//     },
+
+//   }
+
+// })();
+
+
+
+
+// const UIController = (function() {
+
+//   const DOM = dataModule.getDOM();
+//   DOM.tagContainer.addEventListener('click', event => {
+//     if (!event.target.classList.contains('tag')) return;
+//     const keyword = event.target.dataset.keyword;
+//     controller.searchByTag(keyword)
+//   });
+
+//   DOM.addTag.addEventListener('keydown', e => {
+//     if (e.key === 'Enter') {
+//       controller.addNewTag(e.target, DOM.tagContainer);
+//     }
+//   })
+
+//   DOM.addTag.focus();
+
+// })();
+
+
+// const msg = "%cWonkook Lee ⓒ oneook";
+// const css = "font-size: 2em; color: #FEDC45; background-color: #000;font-family: 'Libre Baskerville', serif;";
+// console.log(msg, css);
