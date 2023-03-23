@@ -83,7 +83,7 @@
     return {
 
       // searchByTag는 keyword를 매겨번수로 받아들임
-      searchByTag(keyword){
+      searchByTag(event, keyword){
         fetch(`https://source.unsplash.com/featured/?${keyword.toLowerCase()}`)
         // fetch() 함수를 사용해서 Unplacsh API에서 Keyword에 해당하는 이미지를 가져오는 HTTP 요청
         .then((response) => {
@@ -101,7 +101,7 @@
         // tagHTML 함수를 사용하여 새로운 태그의 HTML코드 생성
         parentNode.insertAdjacentHTML('beforeend', newHTML);
         // beforeend 위치에 newHTML을 삽입하여 새로운 태그를 추가 - insert 끼워넣다 Adjacent 인접한
-        this.searchByTag(target.value);
+        this.searchByTag(null, target.value);
         // 새로운 태그에 해당하는 이미지를 가져와서 웹페이지의 배경 이미지를 변경
         target.value = '';
         // target 엘리먼트 값을 초기화
@@ -125,10 +125,8 @@
     DOM.tagContainer.addEventListener('click', event => {
 
       if (!event.target.classList.contains('tag')) return;
-
       const keyword = event.target.dataset.keyword;
-
-      controller.searchByTag(keyword)
+      controller.searchByTag(null, keyword)
       // 1. 만약 클릭된 엘리먼트가 tag 클래스를 포함하고 있다면, 
       // 2. 클릭된 태그의 data-keyword 속성값을 keyword 변수에 저장하고
       // 3. ontroller.searchByTag() 메서드를 호출하여 해당키워드에 맞는 이미지 호출
