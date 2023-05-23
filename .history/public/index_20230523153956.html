@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/index.css">
+  <script defer src="App.js"></script>
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>검색어를 입력해보세요!</title>
+</head>
+  
+<section class="wrapper">
+  <header>
+      <div>
+        <a href="https://github.com/YoonJoowon" target="_blank">
+          <h1>Rik's project</h1>
+          <p>이미지 초이스 1.0</p>
+        </a>
+      </div>
+      <div class="master__panel">
+        <button class="btn" id="export">이미지 저장</button>
+      </div>
+  </header>
+</section>
+
+<section class="bar">
+  <div class="imgBack"></div>
+
+  <div class="scrollbar">
+      <div class="images">
+        <img class="image1" onclick="changeBackground(this)">
+        <img class="image2" onclick="changeBackground(this)">
+        <img class="image3" onclick="changeBackground(this)">
+        <img class="image4" onclick="changeBackground(this)">
+        <img class="image5" onclick="changeBackground(this)">
+        <img class="image6" onclick="changeBackground(this)">
+        <img class="image7" onclick="changeBackground(this)">
+        <img class="image8" onclick="changeBackground(this)">
+        <img class="image9" onclick="changeBackground(this)">
+        <img class="image10" onclick="changeBackground(this)">
+        <img class="image11" onclick="changeBackground(this)">
+      </div>
+  </div>
+</section>
+
+<body>
+  <section class="container">
+    <input type="text" class="addTag"  placeholder="태그를 입력하세요!" >
+    <section class="container_tag">
+      <!-- container__tag 이거랑 addEventListner랑 관련 있음  -->
+      <article class="tag" data-keyword="">
+          #태그
+    </section>
+  </section>
+</body>
+
+  <script>
+    function changeBackground(imageElement) {
+      const imageUrl = imageElement.src;
+      document.body.style.backgroundImage = `url(${imageUrl})`;
+  }
+  </script>
+</html>
