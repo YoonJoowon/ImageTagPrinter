@@ -46,7 +46,7 @@ const dataModule = (function () {
     image11
   ];
   
-  let currentIndex = -1; // 한 번 돌면 위에서 오류가 남
+  // let currentIndex = -1; // 한 번 돌면 위에서 오류가 남
   
   function showNextImage() {
     // 현재 인덱스 1 증가시키기
