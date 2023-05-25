@@ -58,7 +58,6 @@ function tagHTML(keyword, [R, G, B]) {
 }
 
 // 사진 추가
-
 const DOM = dataModule.getDOM();
 
 async function searchByTag(event, keyword) {
