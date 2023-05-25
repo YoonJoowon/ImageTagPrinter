@@ -67,7 +67,7 @@ header .author .user {
     border-radius: 5px;
     border: none;
     background-color: #ebebeb;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     color: rgb(0, 0, 0);
     font-size: 16px;
     font-weight: 400;
@@ -78,7 +78,7 @@ header .author .user {
 
   .btn:active {
     transform: scale(1.2);
-    opacity: 0.2;
+    /* opacity: 0.2; */
   }
   .btn:hover {
     background-color: rgba(112, 215, 148, 0.7);
@@ -144,7 +144,7 @@ img {
   object-fit: cover;
   margin-right: 20px;
   margin-top: 10px;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 
   cursor: pointer;
   border-radius: 15px;
@@ -261,7 +261,7 @@ input.addTag::-webkit-input-placeholder {
 
 .tag:hover {
   color: #fff;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   transform: translateY(-5px);
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(-5px);

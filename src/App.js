@@ -1,4 +1,3 @@
-// "use strict"
 
 // 즉시 실행함수를 사용하여 dataModule 을 생성하고 모듈 내에서 DOM 요소를 가져오는 코드임
 const dataModule = (function () {
@@ -99,7 +98,7 @@ const dataModule = (function () {
             // 그리고나서 .then() 메서드를 이용해서 응답response 객체를 받아 응답객체의 url 속성을 사용하여 이미지 URL을 가져옴
             // images.push(imageUrl);
             if (response.url === "https://images.unsplash.com/source-404?fit=crop&fm=jpg&h=800&q=60&w=1200") {
-              const imageUrl = "https://blog.kakaocdn.net/dn/cyPqS7/btrLR7rzKfq/7GTUuhsBjWQeg9167VPS81/img.png";
+              const imageUrl = "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https:%2F%2Fblog.kakaocdn.net%2Fdn%2FWddvk%2FbtqAqhHHM3k%2F6hAu4NLbmUqKfR2SVJ4bM1%2Fimg.png";
               images[currentIndex].src = imageUrl;
               images[currentIndex].alt = keyword;
       
@@ -196,5 +195,3 @@ const dataModule = (function () {
     const popup = window.open("", "popup", "width=1280, height=860");
     popup.document.write('<img src="' + link.href + '" width="100%" />');
   });
-  
-  
