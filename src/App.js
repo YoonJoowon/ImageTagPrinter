@@ -3,30 +3,7 @@ const unplashImageNone =
 const insteadUnplashImageNone =
   "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https:%2F%2Fblog.kakaocdn.net%2Fdn%2FWddvk%2FbtqAqhHHM3k%2F6hAu4NLbmUqKfR2SVJ4bM1%2Fimg.png";
 
-const image1 = document.querySelector(".image1");
-const image2 = document.querySelector(".image2");
-const image3 = document.querySelector(".image3");
-const image4 = document.querySelector(".image4");
-const image5 = document.querySelector(".image5");
-const image6 = document.querySelector(".image6");
-const image7 = document.querySelector(".image7");
-const image8 = document.querySelector(".image8");
-const image9 = document.querySelector(".image9");
-const image10 = document.querySelector(".image10");
-const image11 = document.querySelector(".image11");
-const images = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
-  image9,
-  image10,
-  image11,
-];
+const images = Array.from(document.querySelectorAll(".image")).map((image) => image);
 
 // 모듈 내에서 DOM 요소를 가져오는 코드
 const dataModule = (function () {
