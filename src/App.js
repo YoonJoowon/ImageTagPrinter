@@ -3,7 +3,9 @@ const unplashImageNone =
 const insteadUnplashImageNone =
   "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https:%2F%2Fblog.kakaocdn.net%2Fdn%2FWddvk%2FbtqAqhHHM3k%2F6hAu4NLbmUqKfR2SVJ4bM1%2Fimg.png";
 
-const images = Array.from(document.querySelectorAll(".image")).map((image) => image);
+const images = Array.from(document.querySelectorAll(".image")).map(
+  (image) => image
+);
 
 // 모듈 내에서 DOM 요소를 가져오는 코드
 const dataModule = (function () {
@@ -19,7 +21,7 @@ const dataModule = (function () {
       return DOM;
     },
   };
-})();
+})()
 
 let currentIndex = 0;
 function showNextImage() {
