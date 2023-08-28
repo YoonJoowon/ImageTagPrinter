@@ -21,7 +21,7 @@ const dataModule = (function () {
       return DOM;
     },
   };
-})();
+})()
 
 let currentIndex = 0;
 function showNextImage() {
